@@ -29,7 +29,7 @@ const TableCandidate: React.FC<TableCandidateProps> = ({ candidates, onEdit, onD
                             <TableCell>{candidate.Adress}</TableCell>
                             <TableCell>{candidate.DateBirth.toLocaleDateString()}</TableCell>
                             <TableCell>
-                                <Button onClick={(e) => { e.stopPropagation(); onDelete(candidate.Id); }}>Delete</Button>
+                                <Button onClick={(e) => { e.stopPropagation(); onDelete(candidate.Id); }}>Удалить</Button>
                             </TableCell>
                         </TableRow>
                     ))}

@@ -12,15 +12,15 @@ const App: React.FC = () => {
     return (
         <Router>
             <Header />
-            <InterviewProvider>
             <CandidateProvider>
+            <InterviewProvider>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/candidates" element={<ManageCandidate />} />
                     <Route path="/interviews" element={<ManageInterview />} />
                 </Routes>
-            </CandidateProvider>
             </InterviewProvider>
+            </CandidateProvider>
         </Router>
     );
 };

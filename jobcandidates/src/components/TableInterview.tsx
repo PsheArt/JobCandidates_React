@@ -1,6 +1,6 @@
 import React from 'react';
 import { Interview } from '../models';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button} from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button} from '@mui/material';
 
 interface TableInterviewProps {
     interviews: Interview[];
@@ -11,8 +11,7 @@ interface TableInterviewProps {
 const TableInterview: React.FC<TableInterviewProps> = ({ interviews, onEdit, onDelete }) => { 
 
     return (
-        <Paper>
-            <TableContainer>
+          <TableContainer>
                 <Table>
                     <TableHead>
                         <TableRow>
@@ -31,14 +30,13 @@ const TableInterview: React.FC<TableInterviewProps> = ({ interviews, onEdit, onD
                             <TableCell>{interview.Department}</TableCell>
                             <TableCell>{interview.Position}</TableCell>
                             <TableCell>
-                                <Button onClick={(e) => { e.stopPropagation(); onDelete(interview.Id); }}>Delete</Button>
+                                <Button onClick={(e) => { e.stopPropagation(); onDelete(interview.Id); }}>Удалить</Button>
                             </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
                 </Table>
             </TableContainer>
-        </Paper>
     );
 };
 

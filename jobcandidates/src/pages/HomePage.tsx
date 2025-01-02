@@ -9,7 +9,9 @@ import { Candidate } from '../models/Candidate';
 import { Interview } from '../models/Interview';
 import { useCandidates } from '../contexts/CandidateContext';
 import FormCandidate from '../components/FormCandidate';
+import FormInterview from '../components/FormInterview';
 import TableCandidate from '../components/TableCandidate';
+import ManageInterview from '../pages/ManageInterviewPage'
 
 const samplecandidates: Candidate[] = [
     { Id: 1, FullName: "Иванов Иван", PhoneNumber: "+7 (999) 123-45-67", Adress: "ivanovII@yandex.com", DateBirth: new Date('1990-01-01') },
@@ -40,6 +42,7 @@ const HomePage: React.FC = () => {
     const { candidates, addCandidate, updateCandidate, deleteCandidate } = useCandidates();
 
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
+    const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleDelete = (id: number) => {
@@ -59,9 +62,14 @@ const HomePage: React.FC = () => {
         setSelectedCandidate(samplecandidates);
         setIsModalOpen(true);
     };
+    const handleOpenModalInterview = (interview: Interview | null) => {
+        setSelectedInterview(interview);
+        setIsModalOpen(true);
+    };
     const handleOpenAddModal = () => {
-        setSelectedCandidate(null); // Сбрасываем выбранного кандидата
-        setIsModalOpen(true); // Открываем модальное окно
+        setSelectedCandidate(null); 
+        setSelectedInterview(null)
+        setIsModalOpen(true); 
     };
 
     return (
@@ -75,9 +83,6 @@ const HomePage: React.FC = () => {
                     Управление кандидатами
                 </Typography>
                 <TableCandidate candidates={samplecandidates} onEdit={handleOpenModal} onDelete={handleDelete} />
-                <Fab color="primary" aria-label="add" style={{ position: 'fixed', bottom: 16, right: 16 }} onClick={handleOpenAddModal}>
-                    <AddIcon />
-                </Fab>
                 <FormCandidate
                     open={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
@@ -90,9 +95,17 @@ const HomePage: React.FC = () => {
                 <AssignmentTable assignments={sampleAssignments} />
 
                 <Typography variant="h5" gutterBottom align="left">
-                    Управление собеседованием
+                    Управление собеседованиями
                 </Typography>
-                <TableInterview interviews={sampleInterviews} />
+                <TableInterview interviews={sampleInterviews} onEdit={handleOpenModalInterview} onDelete={handleDelete} />
+                <Fab color="primary" aria-label="add" style={{ position: 'fixed', bottom: 16, right: 16 }} onClick={handleOpenAddModal}>
+                    <AddIcon />
+                </Fab>
+                <FormInterview
+                    open={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
+               
             </Container>
         </>
     );

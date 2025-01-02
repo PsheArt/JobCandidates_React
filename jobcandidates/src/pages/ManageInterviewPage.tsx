@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { Interview }  from '../models/Interview'
-import { useInterviewContext }  from '../contexts/InterviewContext'
+import  { useInterviewContext } from '../contexts/InterviewContext'
 import TableInterview from '../components/TableInterview'
 
 const ManageInterview: React.FC = () =>{
@@ -44,7 +44,6 @@ const ManageInterview: React.FC = () =>{
             <FormInterview
                 open={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
-                onSubmit={handleAddOrUpdate}
             />
         </>
     );
