@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import { useInterviewContext } from '../contexts/InterviewContext';
 import { Interview } from '../models/Interview'
+import { Stack } from '../models/Assignment'
 
 const style = {
     position: 'absolute',
@@ -31,10 +32,16 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     const [assignmentName, setAssignmentName] = useState(interview?.Assignment.NameTask || '');
     const [assignmentDescription, setAssignmentDescription] = useState(interview?.Assignment.DescriptionTask || '');
     const [executionTime, setExecutionTime] = useState(interview?.Assignment.ExecutionTime.toISOString().split('T')[0] || '');
+    const [assignmentId, setAssignmentId] = useState(interview?.Assignment.Id || '');
+    const [executionDeadLine, setExecutionDeadLine] = useState(interview?.Assignment.DeadLine|| new Date());
     const [candidateFullName, setCandidateFullName] = useState(interview?.CandidateId.FullName || '');
-    const [candidateAddress, setCandidateAddress] = useState(interview?.CandidateId.Address || '');
+    const [candidateAddress, setCandidateAddress] = useState(interview?.CandidateId.Adress || '');
+    const [candidateId, setCandidateId] = useState(interview?.CandidateId.Id || '');
+    const [candidateDateBirth, setCandidateDateBirth] = useState(interview?.CandidateId.DateBirth || '');
+    const [candidatePhoneNumber, setCandidatePhoneNumber] = useState(interview?.CandidateId.PhoneNumber || '');
+    
 
-    const [stack, setStack] = useState<string[]>(interview?.Assignment.Stack || []);
+    const [stack, setStack] = useState<Stack[]>(interview?.Assignment.Stak || []);
     const [newTechnology, setNewTechnology] = useState('');
 
 
@@ -64,15 +71,17 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     const handleSubmit = () => {
         const newInterview = {
             Id: interview ? interview.Id : Date.now(),
-            CandidateId: { FullName: candidateFullName, Address: candidateAddress },
+            CandidateId: {Id:candidateId as number, FullName: candidateFullName, Adress: candidateAddress,  PhoneNumber:candidatePhoneNumber, DateBirth: candidateDateBirth as Date },
             DateInterview: new Date(dateInterview),
             Department: department,
             Position: interview?.Position || '', 
             Assignment: {
+                Id: assignmentId as number,
                 NameTask: assignmentName,
                 DescriptionTask: assignmentDescription,
                 ExecutionTime: new Date(executionTime),
-                Stack: [], 
+                Stak: stack, 
+                DeadLine: executionDeadLine
             },
             LinkOnCompletedTask: linkOnCompletedTask,
             AttachedFiles: [], 

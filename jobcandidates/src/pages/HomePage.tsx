@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
                 <Typography variant="h5" gutterBottom align="left">
                     Управление тестовыми заданиями
                 </Typography>
-                <AssignmentTable assignments={sampleAssignments} />
+                <AssignmentTable assignments={sampleAssignments} onEdit={handleOpenModal} onDelete={handleDelete}  />
 
                 <Typography variant="h5" gutterBottom align="left">
                     Управление собеседованиями

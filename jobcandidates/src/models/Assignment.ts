@@ -6,7 +6,7 @@ export interface Assignment {
     DeadLine: Date
     ExecutionTime: Date
 }
-enum Stack {
+export enum Stack {
     JavaScript = "JavaScript",
     TypeScript = "TypeScript",
     React = "React",
