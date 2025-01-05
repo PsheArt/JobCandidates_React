@@ -43,6 +43,7 @@ const HomePage: React.FC = () => {
 
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
     const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
+    const [selectedAssignment, setSelectedAssignment] = useState<Assignment | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleDelete = (id: number) => {
@@ -64,6 +65,10 @@ const HomePage: React.FC = () => {
     };
     const handleOpenModalInterview = (interview: Interview | null) => {
         setSelectedInterview(interview);
+        setIsModalOpen(true);
+    };
+    const handleOpenModalAssignment = (assignment: Assignment | null) => {
+        setSelectedAssignment(assignment);
         setIsModalOpen(true);
     };
     const handleOpenAddModal = () => {
@@ -92,7 +97,7 @@ const HomePage: React.FC = () => {
                 <Typography variant="h5" gutterBottom align="left">
                     Управление тестовыми заданиями
                 </Typography>
-                <AssignmentTable assignments={sampleAssignments} onEdit={handleOpenModal} onDelete={handleDelete}  />
+                <AssignmentTable assignments={sampleAssignments} onEdit={handleOpenModalAssignment} onDelete={handleDelete}  />
 
                 <Typography variant="h5" gutterBottom align="left">
                     Управление собеседованиями
