@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
     return (
-        <TableFooter position="static" sx={{ top: 'auto', bottom: 0 }}>
+        <TableFooter component="tfoot" >
             <Toolbar>
                 <Typography variant="h6" sx={{ flexGrow: 1 }}>
                     Логотип

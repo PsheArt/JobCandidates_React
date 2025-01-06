@@ -4,6 +4,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { Interview }  from '../models/Interview'
 import  { useInterviewContext } from '../contexts/InterviewContext'
 import TableInterview from '../components/TableInterview'
+import FormInterview from '../components/FormInterview'
 
 const ManageInterview: React.FC = () =>{
 

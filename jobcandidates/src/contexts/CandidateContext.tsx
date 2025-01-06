@@ -1,8 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { Candidate }  from '../models/Candidate';
 
-
-
 interface CandidateContextType {
     candidates: Candidate[];
     addCandidate: (candidate: Candidate) => void;

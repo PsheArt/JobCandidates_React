@@ -7,6 +7,7 @@ export interface Assignment {
     ExecutionTime: Date
 }
 export enum Stack {
+    None = "",
     JavaScript = "JavaScript",
     TypeScript = "TypeScript",
     React = "React",
@@ -16,4 +17,5 @@ export enum Stack {
     Java = "Java",
     CSharp = "C#",
     PHP = "PHP"
+    
 }

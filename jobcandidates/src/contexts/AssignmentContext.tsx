@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import { Assignment } from './models/Assignment';
+import { Assignment } from '../models/Assignment';
 
 interface AssignmentContextType {
     assignments: Assignment[];
