@@ -8,7 +8,7 @@ interface AssignmentContextType {
     deleteAssignment: (id: number) => void;
 }
 
-const AssignmentContext = createContext<AssignmentContextType | undefined>(undefined);
+const AssignmentContext = createContext<AssignmentContextType | null>(null);
 
 export const AssignmentProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [assignments, setAssignments] = useState<Assignment[]>([]);

@@ -1,7 +1,7 @@
 // src/components/AssignmentTable.tsx
 import React from 'react';
 import { Assignment } from '../models/Assignment';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, Paper } from '@mui/material';
 
 interface AssignmentTableProps {
     assignments: Assignment[];
@@ -25,7 +25,7 @@ const AssignmentTable: React.FC<AssignmentTableProps> = ({ assignments, onEdit, 
                 </TableHead>
                 <TableBody>
                     {assignments.map((assignment) => (
-                        <TableRow key={assignment.Id} onclick = {()=>onEdit(assignment)}>
+                        <TableRow key={assignment.Id} onClick = {()=>onEdit(assignment)}>
                             <TableCell>{assignment.Id}</TableCell>
                             <TableCell>{assignment.NameTask}</TableCell>
                             <TableCell>{assignment.DescriptionTask}</TableCell>

@@ -9,21 +9,11 @@ import FormInterview from '../components/FormInterview'
 const ManageInterview: React.FC = () =>{
 
     const [selectedInterview, setSelectedInterview] = useState<Interview| null>(null)
-    const [interview, addInterview, updateInterview, deleteInterview ] = useInterviewContext();
+    const [interviews, addInterview, updateInterview, deleteInterview ] = useInterviewContext();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
      const handleDelete = (id: number) => {
         deleteInterview(id); 
-    };
-
-    const handleAddOrUpdate = (interview: Interview) => {
-        if (selectedInterview) {
-            updateInterview(interview);
-        } else {
-            addInterview(interview);
-        }
-        setSelectedInterview(null);
-        setIsModalOpen(false);
     };
 
     const handleOpenModal = (interview: Interview | null) => {
@@ -38,7 +28,7 @@ const ManageInterview: React.FC = () =>{
     return (
         <>
             <h1>Управление собеседованиями</h1>
-            <TableInterview interviews={interview} onEdit={handleOpenModal} onDelete={handleDelete} />
+            <TableInterview interviews={interviews} onEdit={handleOpenModal} onDelete={handleDelete} />
             <Fab color="primary" aria-label="add" style={{ position: 'fixed', bottom: 16, right: 16 }} onClick={handleOpenAddModal}>
                 <AddIcon />
             </Fab>
