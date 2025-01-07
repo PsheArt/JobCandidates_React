@@ -7,7 +7,6 @@ import {
     Tabs,
     Tab,
 } from '@mui/material';
-import { useInterviewContext } from '../contexts/InterviewContext';
 import { Interview } from '../models/Interview'
 import { Stack } from '../models/Assignment'
 
@@ -22,7 +21,6 @@ const style = {
 };
 
 const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: Interview }> = ({ open, onClose, interview }) => {
-    const { addInterview, updateInterview } = useInterviewContext();
 
     const [tabIndex, setTabIndex] = useState(0);
     const [dateInterview, setDateInterview] = useState(interview?.DateInterview.toISOString().split('T')[0] || '');
@@ -42,32 +40,9 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     
 
     const [stack, setStack] = useState<Stack[]>(interview?.Assignment.Stak || []);
-    const [newTechnology, setNewTechnology] = useState('');
 
 
-    const [attachedFiles, setAttachedFiles] = useState<File[]>(interview?.AttachedFiles || []);
 
-    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        if (event.target.files) {
-            const filesArray = Array.from(event.target.files);
-            setAttachedFiles(prevFiles => [...prevFiles, ...filesArray]);
-        }
-    };
-
-    const handleRemoveFile = (fileToRemove: File) => {
-        setAttachedFiles(prevFiles => prevFiles.filter(file => file !== fileToRemove));
-    };
-
-    const handleAddTechnology = () => {
-        if (newTechnology) {
-            setStack(prevStack => [...prevStack, newTechnology]);
-            setNewTechnology('');
-        }
-    };
-
-    const handleRemoveTechnology = (technologyToRemove: string) => {
-        setStack(prevStack => prevStack.filter(tech => tech !== technologyToRemove));
-    };   
     const handleSubmit = () => {
         const newInterview = {
             Id: interview ? interview.Id : Date.now(),

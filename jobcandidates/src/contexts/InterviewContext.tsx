@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { Interview }  from '../models/Interview';
 
 interface InterviewContextType {
-    interview: Interview[];
+    interviews: Interview[];
     addInterview: (interview: Interview) => void;
     updateInterview: (interview: Interview) => void;
     deleteInterview: (id: number) => void;
@@ -11,7 +11,7 @@ interface InterviewContextType {
 const InterviewContext = createContext<InterviewContextType | null>(null);
 
 export const InterviewProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-     const [interview, setInterview] = useState<Interview[]>([]);
+     const [interviews, setInterview] = useState<Interview[]>([]);
 
      const addInterview = (interview: Interview) => {
         setInterview((prev) => [...prev, interview]);
@@ -27,9 +27,8 @@ export const InterviewProvider: React.FC<{ children: ReactNode }> = ({ children 
         setInterview((prev) => prev.filter((interview) => interview.Id !== id));
     };
 
-    const value = { interview, addInterview, updateInterview, deleteInterview };
     return (
-        <InterviewContext.Provider value= { value } >
+        <InterviewContext.Provider value={{ interviews, addInterview, updateInterview, deleteInterview }} >
         { children }
         </InterviewContext.Provider>
     );
