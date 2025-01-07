@@ -11,7 +11,7 @@ import { useCandidates } from '../contexts/CandidateContext';
 import FormCandidate from '../components/FormCandidate';
 import FormInterview from '../components/FormInterview';
 import TableCandidate from '../components/TableCandidate';
-import ManageInterview from '../pages/ManageInterviewPage'
+
 
 const samplecandidates: Candidate[] = [
     { Id: 1, FullName: "Иванов Иван", PhoneNumber: "+7 (999) 123-45-67", Adress: "ivanovII@yandex.com", DateBirth: new Date('1990-01-01') },

@@ -1,1 +1,2 @@
 C:\Users\psheart\source\repos\JobCandidates\JobCandidates\obj\Debug\jobcandidates.esproj.CoreCompileInputs.cache
+C:\Users\psheart\OneDrive\Документы\GitHub\JobCandidates_React\JobCandidates\obj\Debug\jobcandidates.esproj.CoreCompileInputs.cache

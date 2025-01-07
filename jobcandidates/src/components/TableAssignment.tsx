@@ -1,7 +1,7 @@
 // src/components/AssignmentTable.tsx
 import React from 'react';
 import { Assignment } from '../models/Assignment';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, Paper } from '@mui/material';
 
 interface AssignmentTableProps {
     assignments: Assignment[];
