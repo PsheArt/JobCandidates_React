@@ -44,7 +44,8 @@ const HomePage: React.FC = () => {
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
     const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
     const [selectedAssignment, setSelectedAssignment] = useState<Assignment | null>(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isCandidateModalOpen, setIsCandidateModalOpen] = useState(false);
+    const [isInterviewModalOpen, setIsInterviewModalOpen] = useState(false);
 
     const handleDelete = (id: number) => {
         deleteCandidate(id);
@@ -57,24 +58,25 @@ const HomePage: React.FC = () => {
             addCandidate(samplecandidates);
         }
         setSelectedCandidate(null);
-        setIsModalOpen(false);
+        setIsCandidateModalOpen(false);
     };
     const handleOpenModal = (samplecandidates: Candidate | null) => {
         setSelectedCandidate(samplecandidates);
-        setIsModalOpen(true);
+        setIsCandidateModalOpen(true);
     };
     const handleOpenModalInterview = (interview: Interview | null) => {
         setSelectedInterview(interview);
-        setIsModalOpen(true);
+        setIsInterviewModalOpen(true);
     };
     const handleOpenModalAssignment = (assignment: Assignment | null) => {
         setSelectedAssignment(assignment);
-        setIsModalOpen(true);
+        setIsCandidateModalOpen(true);
     };
     const handleOpenAddModal = () => {
         setSelectedCandidate(null); 
         setSelectedInterview(null)
-        setIsModalOpen(true); 
+        setIsCandidateModalOpen(true); 
+
     };
 
     return (
@@ -89,8 +91,8 @@ const HomePage: React.FC = () => {
                 </Typography>
                 <TableCandidate candidates={samplecandidates} onEdit={handleOpenModal} onDelete={handleDelete} />
                 <FormCandidate
-                    open={isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
+                    open={isCandidateModalOpen}
+                    onClose={() => setIsCandidateModalOpen(false)}
                     onSubmit={handleAddOrUpdate}
                     initialData={selectedCandidate}
                 />
@@ -107,8 +109,8 @@ const HomePage: React.FC = () => {
                     <AddIcon />
                 </Fab>
                 <FormInterview
-                    open={isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
+                    open={isInterviewModalOpen}
+                    onClose={() => setIsInterviewModalOpen(false)}
                 />
                
             </Container>

@@ -73,37 +73,37 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     };
     return (
         <Modal open={open} onClose={onClose}>
-            <Box sx={{ style }}>
-                <h2>Интервью</h2>
+            <Box sx={ style }>
+                <h2>РРЅС‚РµСЂРІСЊСЋ</h2>
                 <Tabs value={tabIndex} onChange={(event, newValue) => setTabIndex(newValue)}>
-                    <Tab label="Информация об интервью" />
-                    <Tab label="Информация о задании" />
-                    <Tab label="Информация о кандидате" />
+                    <Tab label="РРЅС„РѕСЂРјР°С†РёСЏ РѕР± РёРЅС‚РµСЂРІСЊСЋ" />
+                    <Tab label="РРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р·Р°РґР°РЅРёРё" />
+                    <Tab label="РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєР°РЅРґРёРґР°С‚Рµ" />
                 </Tabs>
 
                 {tabIndex === 0 && (
                     <Box sx={{ mt: 2 }}>
                         <TextField
-                            label="Дата интервью"
+                            label="Р”Р°С‚Р° РёРЅС‚РµСЂРІСЊСЋ"
                             type="date"
                             value={dateInterview}
                             onChange={(e) => setDateInterview(e.target.value)}
                             fullWidth
                         />
                         <TextField
-                            label="Отдел"
+                            label="РћС‚РґРµР»"
                             value={department}
                             onChange={(e) => setDepartment(e.target.value)}
                             fullWidth
                         />
                         <TextField
-                            label="Ссылка на выполненное задание"
+                            label="РЎСЃС‹Р»РєР° РЅР° РІС‹РїРѕР»РЅРµРЅРЅРѕРµ Р·Р°РґР°РЅРёРµ"
                             value={linkOnCompletedTask}
                             onChange={(e) => setLinkOnCompletedTask(e.target.value)}
                             fullWidth
                         />
                         <TextField
-                            label="Интервьюер"
+                            label="РРЅС‚РµСЂРІСЊСЋРµСЂ"
                             value={interviewer}
                             onChange={(e) => setInterviewer(e.target.value)}
                             fullWidth
@@ -114,19 +114,19 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                 {tabIndex === 1 && (
                     <Box sx={{ mt: 2 }}>
                         <TextField
-                            label="Название задания"
+                            label="РќР°Р·РІР°РЅРёРµ Р·Р°РґР°РЅРёСЏ"
                             value={assignmentName}
                             onChange={(e) => setAssignmentName(e.target.value)}
                             fullWidth
                         />
                         <TextField
-                            label="Описание задания"
+                            label="РћРїРёСЃР°РЅРёРµ Р·Р°РґР°РЅРёСЏ"
                             value={assignmentDescription}
                             onChange={(e) => setAssignmentDescription(e.target.value)}
                             fullWidth
                         />
                         <TextField
-                            label="Срок выполнения"
+                            label="РЎСЂРѕРє РІС‹РїРѕР»РЅРµРЅРёСЏ"
                             type="date"
                             value={executionTime}
                             onChange={(e) => setExecutionTime(e.target.value)}
@@ -138,13 +138,13 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                 {tabIndex === 2 && (
                     <Box sx={{ mt: 2 }}>
                         <TextField
-                            label="Полное имя кандидата"
+                            label="РџРѕР»РЅРѕРµ РёРјСЏ РєР°РЅРґРёРґР°С‚Р°"
                             value={candidateFullName}
                             onChange={(e) => setCandidateFullName(e.target.value)}
                             fullWidth
                         />
                         <TextField
-                            label="Адрес кандидата"
+                            label="РђРґСЂРµСЃ РєР°РЅРґРёРґР°С‚Р°"
                             value={candidateAddress}
                             onChange={(e) => setCandidateAddress(e.target.value)}
                             fullWidth
@@ -153,7 +153,7 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                 )}
 
                 <Button variant="contained" color="primary" onClick={handleSubmit} sx={{ mt: 2 }}>
-                    Сохранить
+                    РЎРѕС…СЂР°РЅРёС‚СЊ
                 </Button>
             </Box>
         </Modal>
