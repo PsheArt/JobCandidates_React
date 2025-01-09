@@ -15,7 +15,15 @@ const ManageInterview: React.FC = () =>{
      const handleDelete = (id: number) => {
         deleteInterview(id); 
     };
-
+    const handleAddOrUpdateInterview = (interview: Interview) => {
+        if (interview) {
+            updateInterview(interview);
+        } else {
+            addInterview(interview);
+        }
+        setSelectedInterview(null);
+        setIsModalOpen(false);
+    };
     const handleOpenModal = (interview: Interview | null) => {
         setSelectedInterview(interview);
         setIsModalOpen(true);
@@ -35,6 +43,7 @@ const ManageInterview: React.FC = () =>{
             <FormInterview
                 open={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
+                onSubmit={handleAddOrUpdateInterview }
             />
         </>
     );

@@ -8,6 +8,7 @@ import { Assignment } from '../models/Assignment';
 import { Candidate } from '../models/Candidate';
 import { Interview } from '../models/Interview';
 import { useCandidates } from '../contexts/CandidateContext';
+import { useInterviewContext } from '../contexts/InterviewContext'
 import FormCandidate from '../components/FormCandidate';
 import FormInterview from '../components/FormInterview';
 import TableCandidate from '../components/TableCandidate';
@@ -40,7 +41,7 @@ const sampleInterviews: Interview[] = [
 
 const HomePage: React.FC = () => {
     const { candidates, addCandidate, updateCandidate, deleteCandidate } = useCandidates();
-
+    const [interviews, addInterview, updateInterview, deleteInterview] = useInterviewContext();
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
     const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
     const [selectedAssignment, setSelectedAssignment] = useState<Assignment | null>(null);
@@ -60,6 +61,15 @@ const HomePage: React.FC = () => {
         setSelectedCandidate(null);
         setIsCandidateModalOpen(false);
     };
+    const handleAddOrUpdateInterview = (interview: Interview) => {
+        if (selectedInterview) {
+            updateInterview(interview);
+        } else {
+            addInterview(interview);
+        }
+        setSelectedInterview(null);
+        setIsCandidateModalOpen(false);
+    };
     const handleOpenModal = (samplecandidates: Candidate | null) => {
         setSelectedCandidate(samplecandidates);
         setIsCandidateModalOpen(true);
@@ -76,6 +86,7 @@ const HomePage: React.FC = () => {
         setSelectedCandidate(null); 
         setSelectedInterview(null)
         setIsCandidateModalOpen(true); 
+        setIsInterviewModalOpen(true);
 
     };
 
@@ -85,7 +96,6 @@ const HomePage: React.FC = () => {
                 <Typography variant="h4" gutterBottom align="center">
                     Приветствие
                 </Typography>
-
                 <Typography variant="h5" gutterBottom align="left">
                     Управление кандидатами
                 </Typography>
@@ -111,6 +121,7 @@ const HomePage: React.FC = () => {
                 <FormInterview
                     open={isInterviewModalOpen}
                     onClose={() => setIsInterviewModalOpen(false)}
+                    onSubmit={ handleAddOrUpdateInterview }
                 />
                
             </Container>

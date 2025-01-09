@@ -20,7 +20,7 @@ const style = {
     p: 2
 };
 
-const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: Interview }> = ({ open, onClose, interview }) => {
+const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: Interview; onSubmit:(interview:Interview)=>void }> = ({ open, onClose, interview,  onSubmit }) => {
 
     const [tabIndex, setTabIndex] = useState(0);
     const [dateInterview, setDateInterview] = useState(interview?.DateInterview.toISOString().split('T')[0] || '');
@@ -60,15 +60,15 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
             },
             LinkOnCompletedTask: linkOnCompletedTask,
             AttachedFiles: [], 
-            Interviewer: interviewer,
+            Interviewer: interviewer
         };
-
         if (interview) {
             updateInterview(newInterview);
         } else {
             addInterview(newInterview);
         }
 
+        onSubmit(newInterview)
         onClose();
     };
     return (
