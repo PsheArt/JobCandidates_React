@@ -16,7 +16,7 @@ const ManageInterview: React.FC = () =>{
         deleteInterview(id); 
     };
     const handleAddOrUpdateInterview = (interview: Interview) => {
-        if (interview) {
+        if (selectedInterview) {
             updateInterview(interview);
         } else {
             addInterview(interview);

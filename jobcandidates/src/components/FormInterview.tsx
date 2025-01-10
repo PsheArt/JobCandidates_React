@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import { Interview } from '../models/Interview'
 import { Stack } from '../models/Assignment'
+import { useInterviewContext } from '../contexts/InterviewContext'
 
 const style = {
     position: 'absolute',
@@ -21,7 +22,7 @@ const style = {
 };
 
 const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: Interview; onSubmit:(interview:Interview)=>void }> = ({ open, onClose, interview,  onSubmit }) => {
-
+    const [, addInterview, updateInterview, ] = useInterviewContext();
     const [tabIndex, setTabIndex] = useState(0);
     const [dateInterview, setDateInterview] = useState(interview?.DateInterview.toISOString().split('T')[0] || '');
     const [department, setDepartment] = useState(interview?.Department || '');
@@ -30,16 +31,16 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     const [assignmentName, setAssignmentName] = useState(interview?.Assignment.NameTask || '');
     const [assignmentDescription, setAssignmentDescription] = useState(interview?.Assignment.DescriptionTask || '');
     const [executionTime, setExecutionTime] = useState(interview?.Assignment.ExecutionTime.toISOString().split('T')[0] || '');
-    const [assignmentId, setAssignmentId] = useState(interview?.Assignment.Id || '');
-    const [executionDeadLine, setExecutionDeadLine] = useState(interview?.Assignment.DeadLine|| new Date());
+    const [assignmentId, ] = useState(interview?.Assignment.Id || '');
+    const [executionDeadLine, ] = useState(interview?.Assignment.DeadLine|| new Date());
     const [candidateFullName, setCandidateFullName] = useState(interview?.CandidateId.FullName || '');
     const [candidateAddress, setCandidateAddress] = useState(interview?.CandidateId.Adress || '');
-    const [candidateId, setCandidateId] = useState(interview?.CandidateId.Id || '');
-    const [candidateDateBirth, setCandidateDateBirth] = useState(interview?.CandidateId.DateBirth || '');
-    const [candidatePhoneNumber, setCandidatePhoneNumber] = useState(interview?.CandidateId.PhoneNumber || '');
+    const [candidateId, ] = useState(interview?.CandidateId.Id || '');
+    const [candidateDateBirth] = useState(interview?.CandidateId.DateBirth || '');
+    const [candidatePhoneNumber] = useState(interview?.CandidateId.PhoneNumber || '');
     
 
-    const [stack, setStack] = useState<Stack[]>(interview?.Assignment.Stak || []);
+    const [stack] = useState<Stack[]>(interview?.Assignment.Stak || []);
 
 
 

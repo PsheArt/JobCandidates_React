@@ -40,11 +40,11 @@ const sampleInterviews: Interview[] = [
 ];
 
 const HomePage: React.FC = () => {
-    const { candidates, addCandidate, updateCandidate, deleteCandidate } = useCandidates();
-    const [interviews, addInterview, updateInterview, deleteInterview] = useInterviewContext();
+    const {candidates, addCandidate, updateCandidate, deleteCandidate } = useCandidates();
+    const [, addInterview, updateInterview, ] = useInterviewContext();
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
     const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
-    const [selectedAssignment, setSelectedAssignment] = useState<Assignment | null>(null);
+    const [, setSelectedAssignment] = useState<Assignment | null>(null);
     const [isCandidateModalOpen, setIsCandidateModalOpen] = useState(false);
     const [isInterviewModalOpen, setIsInterviewModalOpen] = useState(false);
 
