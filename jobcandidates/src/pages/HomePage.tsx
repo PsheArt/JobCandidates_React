@@ -1,4 +1,3 @@
-// src/pages/HomePage.tsx
 import React, { useState } from 'react';
 import { Container, Fab, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
@@ -12,7 +11,6 @@ import { useInterviewContext } from '../contexts/InterviewContext'
 import FormCandidate from '../components/FormCandidate';
 import FormInterview from '../components/FormInterview';
 import TableCandidate from '../components/TableCandidate';
-
 
 const samplecandidates: Candidate[] = [
     { Id: 1, FullName: "Иванов Иван", PhoneNumber: "+7 (999) 123-45-67", Adress: "ivanovII@yandex.com", DateBirth: new Date('1990-01-01') },
@@ -41,7 +39,7 @@ const sampleInterviews: Interview[] = [
 
 const HomePage: React.FC = () => {
     const {candidates, addCandidate, updateCandidate, deleteCandidate } = useCandidates();
-    const [, addInterview, updateInterview, ] = useInterviewContext();
+    const {addInterview, updateInterview} = useInterviewContext();
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
     const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
     const [, setSelectedAssignment] = useState<Assignment | null>(null);

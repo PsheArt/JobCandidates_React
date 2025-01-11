@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\forminterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\forminterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\contexts\\candidatecontext.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\contexts\\candidatecontext.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\pages\\manageinterviewpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\pages\\manageinterviewpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\pages\\managecandidatepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\pages\\managecandidatepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\tableinterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\tableinterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\tablecandidate.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\tablecandidate.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\formcandidate.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\formcandidate.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\forminterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\forminterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\formassignment.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -27,20 +51,8 @@
       "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\tableassignment.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\tableinterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\tableinterview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\components\\footer.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\components\\footer.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\pages\\manageinterviewpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|solutionrelative:jobcandidates\\src\\pages\\manageinterviewpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F6CA829-7274-4029-8EC5-DEB750FFB16D}|JobCandidates\\jobcandidates.esproj|c:\\users\\psheart\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\jobcandidates_react\\jobcandidates\\src\\models\\assignment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -58,47 +70,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormAssignment.tsx",
-              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormAssignment.tsx",
-              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\FormAssignment.tsx",
-              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormAssignment.tsx",
-              "RelativeToolTip": "jobcandidates\\src\\components\\FormAssignment.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CandidateContext.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\contexts\\CandidateContext.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\contexts\\CandidateContext.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\contexts\\CandidateContext.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\contexts\\CandidateContext.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-07T12:49:47.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AssignmentContext.tsx",
-              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\contexts\\AssignmentContext.tsx",
-              "RelativeDocumentMoniker": "jobcandidates\\src\\contexts\\AssignmentContext.tsx",
-              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\contexts\\AssignmentContext.tsx",
-              "RelativeToolTip": "jobcandidates\\src\\contexts\\AssignmentContext.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-07T12:49:36.198Z"
+              "WhenOpened": "2025-01-11T12:05:00.716Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TableAssignment.tsx",
-              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\TableAssignment.tsx",
-              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\TableAssignment.tsx",
-              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\TableAssignment.tsx",
-              "RelativeToolTip": "jobcandidates\\src\\components\\TableAssignment.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Title": "TableCandidate.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\TableCandidate.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\TableCandidate.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\TableCandidate.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\components\\TableCandidate.tsx",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-07T07:16:03.854Z"
+              "WhenOpened": "2025-01-11T12:02:40.601Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "ManageCandidatePage.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\pages\\ManageCandidatePage.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\pages\\ManageCandidatePage.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\pages\\ManageCandidatePage.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\pages\\ManageCandidatePage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-01-11T11:43:52.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TableInterview.tsx",
               "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\TableInterview.tsx",
               "RelativeDocumentMoniker": "jobcandidates\\src\\components\\TableInterview.tsx",
@@ -106,35 +121,38 @@
               "RelativeToolTip": "jobcandidates\\src\\components\\TableInterview.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-07T07:14:22.099Z"
+              "WhenOpened": "2025-01-07T07:14:22.099Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "ManageInterviewPage.tsx",
               "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\pages\\ManageInterviewPage.tsx",
               "RelativeDocumentMoniker": "jobcandidates\\src\\pages\\ManageInterviewPage.tsx",
               "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\pages\\ManageInterviewPage.tsx",
               "RelativeToolTip": "jobcandidates\\src\\pages\\ManageInterviewPage.tsx",
-              "ViewState": "AQIAABwAAAAAAAAAAAASwC4AAAAOAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-04T00:23:07.767Z"
+              "WhenOpened": "2025-01-04T00:23:07.767Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "HomePage.tsx",
               "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\pages\\HomePage.tsx",
               "RelativeDocumentMoniker": "jobcandidates\\src\\pages\\HomePage.tsx",
               "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\pages\\HomePage.tsx",
               "RelativeToolTip": "jobcandidates\\src\\pages\\HomePage.tsx",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGgAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwB8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-04T00:23:02.407Z"
+              "WhenOpened": "2025-01-04T00:23:02.407Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Assignment.ts",
               "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\models\\Assignment.ts",
               "RelativeDocumentMoniker": "jobcandidates\\src\\models\\Assignment.ts",
@@ -147,6 +165,81 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\App.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\App.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\App.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\App.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-01-04T00:08:20.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormInterview.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormInterview.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\FormInterview.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormInterview.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\components\\FormInterview.tsx",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAnwB8AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-01-04T00:09:09.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormCandidate.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormCandidate.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\FormCandidate.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormCandidate.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\components\\FormCandidate.tsx",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-01-07T13:00:42.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TableAssignment.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\TableAssignment.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\TableAssignment.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\TableAssignment.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\components\\TableAssignment.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-01-07T07:16:03.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssignmentContext.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\contexts\\AssignmentContext.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\contexts\\AssignmentContext.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\contexts\\AssignmentContext.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\contexts\\AssignmentContext.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-01-07T12:49:36.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormAssignment.tsx",
+              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormAssignment.tsx",
+              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\FormAssignment.tsx",
+              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormAssignment.tsx",
+              "RelativeToolTip": "jobcandidates\\src\\components\\FormAssignment.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-01-07T12:49:47.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Footer.tsx",
               "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\Footer.tsx",
               "RelativeDocumentMoniker": "jobcandidates\\src\\components\\Footer.tsx",
@@ -158,32 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormInterview.tsx",
-              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormInterview.tsx",
-              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\FormInterview.tsx",
-              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormInterview.tsx",
-              "RelativeToolTip": "jobcandidates\\src\\components\\FormInterview.tsx",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-04T00:09:09.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormCandidate.tsx",
-              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormCandidate.tsx",
-              "RelativeDocumentMoniker": "jobcandidates\\src\\components\\FormCandidate.tsx",
-              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\components\\FormCandidate.tsx",
-              "RelativeToolTip": "jobcandidates\\src\\components\\FormCandidate.tsx",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADkAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-07T13:00:42.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "jobcandidates",
               "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\JobCandidates\\jobcandidates.esproj",
               "RelativeDocumentMoniker": "JobCandidates\\jobcandidates.esproj",
@@ -191,18 +259,6 @@
               "RelativeToolTip": "JobCandidates\\jobcandidates.esproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-01-04T00:09:01.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "App.tsx",
-              "DocumentMoniker": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\App.tsx",
-              "RelativeDocumentMoniker": "jobcandidates\\src\\App.tsx",
-              "ToolTip": "C:\\Users\\psheart\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\JobCandidates_React\\jobcandidates\\src\\App.tsx",
-              "RelativeToolTip": "jobcandidates\\src\\App.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-01-04T00:08:20.234Z"
             }
           ]
         }

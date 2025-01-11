@@ -22,7 +22,7 @@ const style = {
 };
 
 const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: Interview; onSubmit:(interview:Interview)=>void }> = ({ open, onClose, interview,  onSubmit }) => {
-    const [, addInterview, updateInterview, ] = useInterviewContext();
+    const { addInterview, updateInterview }  = useInterviewContext();
     const [tabIndex, setTabIndex] = useState(0);
     const [dateInterview, setDateInterview] = useState(interview?.DateInterview.toISOString().split('T')[0] || '');
     const [department, setDepartment] = useState(interview?.Department || '');
@@ -38,14 +38,10 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     const [candidateId, ] = useState(interview?.CandidateId.Id || '');
     const [candidateDateBirth] = useState(interview?.CandidateId.DateBirth || '');
     const [candidatePhoneNumber] = useState(interview?.CandidateId.PhoneNumber || '');
-    
-
     const [stack] = useState<Stack[]>(interview?.Assignment.Stak || []);
 
-
-
     const handleSubmit = () => {
-        const newInterview = {
+        const newInterview:Interview = {
             Id: interview ? interview.Id : Date.now(),
             CandidateId: {Id:candidateId as number, FullName: candidateFullName, Adress: candidateAddress,  PhoneNumber:candidatePhoneNumber, DateBirth: candidateDateBirth as Date },
             DateInterview: new Date(dateInterview),

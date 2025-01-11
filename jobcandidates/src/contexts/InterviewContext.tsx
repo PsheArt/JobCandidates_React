@@ -8,7 +8,7 @@ interface InterviewContextType {
     deleteInterview: (id: number) => void;
 }
 
-const InterviewContext = createContext<InterviewContextType | null>(null);
+const InterviewContext = createContext<InterviewContextType | undefined>(undefined);
 
 export const InterviewProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
      const [interviews, setInterview] = useState<Interview[]>([]);
@@ -17,10 +17,10 @@ export const InterviewProvider: React.FC<{ children: ReactNode }> = ({ children 
         setInterview((prev) => [...prev, interview]);
     };
 
-    const updateInterview = (updateInterview: Interview) => {
-        setInterview((prev) =>
-            prev.map((interview) => (interview.Id === updateInterview.Id ? updateInterview : interview))
-        );
+    const updateInterview = (updatedInterview: Interview) => {
+        setInterview(prev => prev.map(interview =>
+            interview.Id === updatedInterview.Id ? updatedInterview : interview
+        ));
     };
 
     const deleteInterview = (id: number) => {
