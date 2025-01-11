@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, Paper } from '@mui/material';
 import { Candidate } from '../models/Candidate';
 
 interface TableCandidateProps {
@@ -10,7 +10,7 @@ interface TableCandidateProps {
 
 const TableCandidate: React.FC<TableCandidateProps> = ({ candidates, onEdit, onDelete }) => {
     return (
-        <TableContainer>
+        <TableContainer component={Paper}>
             <Table>
                 <TableHead>
                     <TableRow>

@@ -1,13 +1,13 @@
-// AssignmentModal.tsx
 import React, { useEffect, useState } from 'react';
-import { Modal, TextField, Button, MenuItem } from '@mui/material';
+import { SelectChangeEvent } from '@mui/material/Select';
+import { Modal, TextField, Button, MenuItem, Select, Chip, InputLabel, FormControl } from '@mui/material';
 import { Stack, Assignment } from '../models/Assignment';
 import { useAssignments } from '../contexts/AssignmentContext';
 
 interface AssignmentFormProps {
     open: boolean;
     onClose: () => void;
-    assignment?: Assignment; 
+    assignment?: Assignment | null; 
 }
 
 const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignment }) => {
@@ -32,20 +32,21 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignme
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleStackChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { value } = e.target;
-        setFormData(prev => ({ ...prev, Stak: [value as Stack] }));
+    const handleStackChange = (event: SelectChangeEvent<Stack[]>) => {
+        const {
+            target: { value },
+        } = event;
+        setFormData(prev => ({ ...prev, Stak: typeof value === 'string' ? value.split(',') as Stack[] : value }));
     };
-
     const handleSubmit = () => {
         if (assignment) {
+            updateAssignment(formData);
             updateAssignment(formData);
         } else {
             addAssignment(formData);
         }
         onClose();
     };
-
     return (
         <Modal open={open} onClose={onClose}>
             <div style={{ padding: '20px', backgroundColor: 'white' }}>
@@ -64,18 +65,26 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignme
                     onChange={handleChange}
                     fullWidth
                 />
-                <TextField
-                    select
-                    label="Stack"
-                    name="Stak"
-                    value={formData.Stak[0] || ''}
-                    onChange={handleStackChange}
-                    fullWidth
-                >
-                    {Object.values(Stack).map((stack) => (
-                        <MenuItem key={stack} value={stack}>{stack}</MenuItem>
-                    ))}
-                </TextField>
+                <FormControl fullWidth>
+                    <InputLabel>Stack</InputLabel>
+                    <Select
+                        multiple
+                        value={formData.Stak}
+                        onChange={handleStackChange}
+                        renderValue={(selected) => (
+                            <div>
+                                {selected.map((value) => (
+                                    <Chip key={value} label={value} />
+                                ))}
+                            </div>
+                        )}>
+                        {Object.values(Stack).map((stack) => (
+                            <MenuItem key={stack} value={stack}>
+                                {stack}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
                 <Button onClick={handleSubmit}>{assignment ? 'Update' : 'Add'}</Button>
             </div>
         </Modal>

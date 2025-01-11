@@ -3,13 +3,14 @@ import { Container, Fab, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import AssignmentTable from '../components/TableAssignment';
 import TableInterview from '../components/TableInterview';
-import { Assignment } from '../models/Assignment';
+import { Assignment, Stack } from '../models/Assignment';
 import { Candidate } from '../models/Candidate';
 import { Interview } from '../models/Interview';
 import { useCandidates } from '../contexts/CandidateContext';
 import { useInterviewContext } from '../contexts/InterviewContext'
 import FormCandidate from '../components/FormCandidate';
 import FormInterview from '../components/FormInterview';
+import FormAssignment from '../components/FormAssignment';
 import TableCandidate from '../components/TableCandidate';
 
 const samplecandidates: Candidate[] = [
@@ -19,8 +20,8 @@ const samplecandidates: Candidate[] = [
 ];
 
 const sampleAssignments: Assignment[] = [
-    { Id: 1, NameTask: "Задание 1", DescriptionTask: "Описание задания 1", Stak: [], DeadLine: new Date('2023-12-10'), ExecutionTime: new Date('2023-11-10') },
-    { Id: 2, NameTask: "Задание 2", DescriptionTask: "Описание задания 2", Stak: [], DeadLine: new Date('2023-12-20'), ExecutionTime: new Date('2023-11-20') },
+    { Id: 1, NameTask: "Задание 1", DescriptionTask: "Описание задания 1", Stak: [Stack.CSharp, Stack.Golang], DeadLine: new Date('2023-12-10'), ExecutionTime: new Date('2023-11-10') },
+    { Id: 2, NameTask: "Задание 2", DescriptionTask: "Описание задания 2", Stak: [Stack.Golang], DeadLine: new Date('2023-12-20'), ExecutionTime: new Date('2023-11-20') },
 ];
 
 const sampleInterviews: Interview[] = [
@@ -42,8 +43,9 @@ const HomePage: React.FC = () => {
     const {addInterview, updateInterview} = useInterviewContext();
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
     const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
-    const [, setSelectedAssignment] = useState<Assignment | null>(null);
+    const [selectedAssignment, setSelectedAssignment] = useState<Assignment | null>(null)
     const [isCandidateModalOpen, setIsCandidateModalOpen] = useState(false);
+    const [isAssignmentModalOpen, setIsAssignmentModalOpen] = useState(false);
     const [isInterviewModalOpen, setIsInterviewModalOpen] = useState(false);
 
     const handleDelete = (id: number) => {
@@ -72,18 +74,17 @@ const HomePage: React.FC = () => {
         setSelectedCandidate(samplecandidates);
         setIsCandidateModalOpen(true);
     };
-    const handleOpenModalInterview = (interview: Interview | null) => {
-        setSelectedInterview(interview);
+    const handleOpenModalInterview = (sampleInterviews: Interview | null) => {
+        setSelectedInterview(sampleInterviews);
         setIsInterviewModalOpen(true);
     };
     const handleOpenModalAssignment = (assignment: Assignment | null) => {
         setSelectedAssignment(assignment);
-        setIsCandidateModalOpen(true);
+        setIsAssignmentModalOpen(true);
     };
     const handleOpenAddModal = () => {
         setSelectedCandidate(null); 
         setSelectedInterview(null)
-        setIsCandidateModalOpen(true); 
         setIsInterviewModalOpen(true);
 
     };
@@ -108,10 +109,14 @@ const HomePage: React.FC = () => {
                     Управление тестовыми заданиями
                 </Typography>
                 <AssignmentTable assignments={sampleAssignments} onEdit={handleOpenModalAssignment} onDelete={handleDelete}  />
-
                 <Typography variant="h5" gutterBottom align="left">
                     Управление собеседованиями
                 </Typography>
+                <FormAssignment
+                    open={isAssignmentModalOpen}
+                    onClose={() => setIsAssignmentModalOpen}
+                    assignment={selectedAssignment} 
+                />
                 <TableInterview interviews={sampleInterviews} onEdit={handleOpenModalInterview} onDelete={handleDelete} />
                 <Fab color="primary" aria-label="add" style={{ position: 'fixed', bottom: 16, right: 16 }} onClick={handleOpenAddModal}>
                     <AddIcon />
