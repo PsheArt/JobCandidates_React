@@ -52,21 +52,35 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignme
             <div style={{ padding: '20px', backgroundColor: 'white' }}>
                 <h2>{assignment ? 'Edit Assignment' : 'Add Assignment'}</h2>
                 <TextField
-                    label="Task Name"
+                    label="Название задания"
                     name="NameTask"
                     value={formData.NameTask}
                     onChange={handleChange}
                     fullWidth
                 />
                 <TextField
-                    label="Description"
+                    label="Описание задания"
                     name="DescriptionTask"
                     value={formData.DescriptionTask}
                     onChange={handleChange}
                     fullWidth
                 />
+                <TextField
+                    label="Срок выполнения"
+                    type="date"
+                    value={formData.DeadLine}
+                    onChange={handleChange}
+                    fullWidth
+                />
+                <TextField
+                    label="Время  выполнения"
+                    type="date"
+                    value={formData.ExecutionTime}
+                    onChange={handleChange}
+                    fullWidth
+                />
                 <FormControl fullWidth>
-                    <InputLabel>Stack</InputLabel>
+                    <InputLabel>Стек</InputLabel>
                     <Select
                         multiple
                         value={formData.Stak}
