@@ -50,37 +50,37 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignme
     return (
         <Modal open={open} onClose={onClose}>
             <div style={{ padding: '20px', backgroundColor: 'white' }}>
-                <h2>{assignment ? 'Edit Assignment' : 'Add Assignment'}</h2>
+                <h2>{assignment ? '–ò–∑–º–µ–Ω–∏—Ç—å' : '–î–æ–±–∞–≤–∏—Ç—å'}</h2>
                 <TextField
-                    label="Õ‡Á‚‡ÌËÂ Á‡‰‡ÌËˇ"
+                    label="–ù–∞–∑–≤–∞–Ω–∏–µ –∑–∞–¥–∞–Ω–∏—è"
                     name="NameTask"
                     value={formData.NameTask}
                     onChange={handleChange}
                     fullWidth
                 />
                 <TextField
-                    label="ŒÔËÒ‡ÌËÂ Á‡‰‡ÌËˇ"
+                    label="–û–ø–∏—Å–∞–Ω–∏–µ –∑–∞–¥–∞–Ω–∏—è"
                     name="DescriptionTask"
                     value={formData.DescriptionTask}
                     onChange={handleChange}
                     fullWidth
                 />
                 <TextField
-                    label="—ÓÍ ‚˚ÔÓÎÌÂÌËˇ"
+                    label="–°—Ä–æ–∫ –≤—ã–ø–æ–ª–Ω–µ–Ω–∏—è"
                     type="date"
                     value={formData.DeadLine}
                     onChange={handleChange}
                     fullWidth
                 />
                 <TextField
-                    label="¬ÂÏˇ  ‚˚ÔÓÎÌÂÌËˇ"
+                    label="–í—Ä–µ–º—è  –≤—ã–ø–æ–ª–Ω–µ–Ω–∏—è"
                     type="date"
                     value={formData.ExecutionTime}
                     onChange={handleChange}
                     fullWidth
                 />
                 <FormControl fullWidth>
-                    <InputLabel>—ÚÂÍ</InputLabel>
+                    <InputLabel>–°—Ç–µ–∫</InputLabel>
                     <Select
                         multiple
                         value={formData.Stak}
@@ -99,7 +99,7 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignme
                         ))}
                     </Select>
                 </FormControl>
-                <Button onClick={handleSubmit}>{assignment ? 'Update' : 'Add'}</Button>
+                <Button onClick={handleSubmit}>{assignment ? '–û–±–Ω–æ–≤–∏—Ç—å' : '–î–æ–±–∞–≤–∏—Ç—å'}</Button>
             </div>
         </Modal>
     );

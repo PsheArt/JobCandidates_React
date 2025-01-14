@@ -34,7 +34,7 @@ const ManageAssignment: React.FC = () => {
 
     return (
         <>
-            <h1>Управление тестовыми заданиями</h1>
+            <h1>РЈРїСЂР°РІР»РµРЅРёРµ С‚РµСЃС‚РѕРІС‹РјРё Р·Р°РґР°РЅРёСЏРјРё</h1>
             <TableAssignment assignments={assignments} onEdit={handleOpenModal} onDelete={handleDelete} />
             <Fab color="primary" aria-label="add" style={{ position: 'fixed', bottom: 16, right: 16 }} onClick={handleOpenAddModal}>
                 <AddIcon />
