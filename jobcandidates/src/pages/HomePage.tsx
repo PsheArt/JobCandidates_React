@@ -8,6 +8,7 @@ import { Candidate } from '../models/Candidate';
 import { Interview } from '../models/Interview';
 import { useCandidates } from '../contexts/CandidateContext';
 import { useInterviewContext } from '../contexts/InterviewContext'
+import { useAssignments } from '../contexts/AssignmentContext'
 import FormCandidate from '../components/FormCandidate';
 import FormInterview from '../components/FormInterview';
 import FormAssignment from '../components/FormAssignment';
@@ -40,7 +41,8 @@ const sampleInterviews: Interview[] = [
 
 const HomePage: React.FC = () => {
     const {candidates, addCandidate, updateCandidate, deleteCandidate } = useCandidates();
-    const {addInterview, updateInterview} = useInterviewContext();
+    const { assignments, addAssignment, updateAssignment, deleteAssignment } = useAssignments();
+    const { addInterview, updateInterview } = useInterviewContext();
     const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
     const [selectedInterview, setSelectedInterview] = useState<Interview | null>(null);
     const [selectedAssignment, setSelectedAssignment] = useState<Assignment | null>(null)
@@ -51,7 +53,9 @@ const HomePage: React.FC = () => {
     const handleDelete = (id: number) => {
         deleteCandidate(id);
     };
-
+    const handleDeleteAssignment = (id: number) => {
+        deleteAssignment(id)
+    }
     const handleAddOrUpdate = (samplecandidates: Candidate) => {
         if (selectedCandidate) {
             updateCandidate(samplecandidates);
@@ -68,6 +72,15 @@ const HomePage: React.FC = () => {
             addInterview(interview);
         }
         setSelectedInterview(null);
+        setIsCandidateModalOpen(false);
+    };
+    const handleAddOrUpdateAssignment = (sampleAssignment: Assignment) => {
+        if (sampleAssignment) {
+            updateAssignment(sampleAssignment);
+        } else {
+            addAssignment(sampleAssignment);
+        }
+        setSelectedCandidate(null);
         setIsCandidateModalOpen(false);
     };
     const handleOpenModal = (samplecandidates: Candidate | null) => {
@@ -108,14 +121,15 @@ const HomePage: React.FC = () => {
                 <Typography variant="h5" gutterBottom align="left">
                     Управление тестовыми заданиями
                 </Typography>
-                <AssignmentTable assignments={sampleAssignments} onEdit={handleOpenModalAssignment} onDelete={handleDelete}  />
+                <AssignmentTable assignments={sampleAssignments} onEdit={handleOpenModalAssignment} onDelete={handleDeleteAssignment}  />
                 <Typography variant="h5" gutterBottom align="left">
                     Управление собеседованиями
                 </Typography>
                 <FormAssignment
                     open={isAssignmentModalOpen}
-                    onClose={() => setIsAssignmentModalOpen}
-                    assignment={selectedAssignment} 
+                    onClose={() => setIsAssignmentModalOpen(false)}
+                    onSubmit={handleAddOrUpdateAssignment}
+                    initialData={selectedAssignment} 
                 />
                 <TableInterview interviews={sampleInterviews} onEdit={handleOpenModalInterview} onDelete={handleDelete} />
                 <Fab color="primary" aria-label="add" style={{ position: 'fixed', bottom: 16, right: 16 }} onClick={handleOpenAddModal}>

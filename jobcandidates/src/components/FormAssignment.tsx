@@ -2,88 +2,91 @@ import React, { useEffect, useState } from 'react';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { Modal, TextField, Button, MenuItem, Select, Chip, InputLabel, FormControl } from '@mui/material';
 import { Stack, Assignment } from '../models/Assignment';
-import { useAssignments } from '../contexts/AssignmentContext';
 
 interface AssignmentFormProps {
     open: boolean;
+    onSubmit: (assignment: Assignment) => void;
     onClose: () => void;
-    assignment?: Assignment | null; 
+    initialData?: Assignment | null;
 }
 
-const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignment }) => {
-    const { addAssignment, updateAssignment } = useAssignments();
-    const [formData, setFormData] = useState<Assignment>({
-        Id: assignment ? assignment.Id : Date.now(),
-        NameTask: '',
-        DescriptionTask: '',
-        Stak: [],
-        DeadLine: new Date(),
-        ExecutionTime: new Date(),
-    });
-
+const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit, initialData }) => {
+    const [nameTask, setNameTask] = useState(initialData?.NameTask || '');
+    const [descriptionTask, setDescriptionTask] = useState(initialData?.DescriptionTask || '');
+    const [stak, setStack] = useState(initialData?.Stak  || []);
+    const [deadLine, setDeadLine] = useState(initialData?.DeadLine.toISOString().split('T')[0]  || '');
+    const [executionTime, setExecutionTime] = useState(initialData?.ExecutionTime.toISOString().split('T')[0]  || '');
     useEffect(() => {
-        if (assignment) {
-            setFormData(assignment);
+        if (initialData) {
+           setNameTask(initialData.NameTask);
+           setDescriptionTask(initialData.DescriptionTask);
+           setStack(initialData.Stak);
+           setDeadLine(initialData.DeadLine.toISOString().split('T')[0]);
+           setExecutionTime(initialData.ExecutionTime.toISOString().split('T')[0]);
+        } else {
+            setNameTask('');
+            setDescriptionTask('');
+            setStack([]);
+            setDeadLine('');
+            setExecutionTime('');
         }
-    }, [assignment]);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
+    }, [initialData]);
 
     const handleStackChange = (event: SelectChangeEvent<Stack[]>) => {
         const {
             target: { value },
         } = event;
-        setFormData(prev => ({ ...prev, Stak: typeof value === 'string' ? value.split(',') as Stack[] : value }));
+        setStack(prev => ({ ...prev, Stak: typeof value === 'string' ? value.split(',') as Stack[] : value }));
     };
-    const handleSubmit = () => {
-        if (assignment) {
-            updateAssignment(formData);
-            updateAssignment(formData);
-        } else {
-            addAssignment(formData);
-        }
+      const handleSubmit = () => {
+        const assignment: Assignment = {
+            Id: initialData ? initialData.Id : Date.now(),
+            NameTask: nameTask,
+            DescriptionTask: descriptionTask,
+            Stak: stak,
+            DeadLine: new Date(deadLine),
+            ExecutionTime: new Date(executionTime)
+        };
+        onSubmit(assignment);
         onClose();
     };
     return (
         <Modal open={open} onClose={onClose}>
             <div style={{ padding: '20px', backgroundColor: 'white' }}>
-                <h2>{assignment ? 'Изменить' : 'Добавить'}</h2>
+                <h2>{initialData ? 'Изменить' : 'Добавить'}</h2>
                 <TextField
                     label="Название задания"
                     name="NameTask"
-                    value={formData.NameTask}
-                    onChange={handleChange}
+                    value={nameTask}
+                    onChange={(e) => setNameTask(e.target.value)} 
                     fullWidth
                 />
                 <TextField
                     label="Описание задания"
                     name="DescriptionTask"
-                    value={formData.DescriptionTask}
-                    onChange={handleChange}
+                    value={descriptionTask}
+                    onChange={(e) => setDescriptionTask(e.target.value)} 
                     fullWidth
                 />
                 <TextField
                     label="Срок выполнения"
                     type="date"
-                    value={formData.DeadLine}
-                    onChange={handleChange}
+                    value={deadLine}
+                    onChange={(e) => setDeadLine(e.target.value)} 
                     fullWidth
                 />
                 <TextField
                     label="Время  выполнения"
                     type="date"
-                    value={formData.ExecutionTime}
-                    onChange={handleChange}
+                    value={executionTime}
+                    onChange={(e) => setExecutionTime(e.target.value)} 
                     fullWidth
                 />
                 <FormControl fullWidth>
                     <InputLabel>Стек</InputLabel>
                     <Select
                         multiple
-                        value={formData.Stak}
+                        value={stak}
                         onChange={handleStackChange}
                         renderValue={(selected) => (
                             <div>
@@ -99,7 +102,7 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignme
                         ))}
                     </Select>
                 </FormControl>
-                <Button onClick={handleSubmit}>{assignment ? 'Обновить' : 'Добавить'}</Button>
+                <Button onClick={handleSubmit}>{initialData ? 'Обновить' : 'Добавить'}</Button>
             </div>
         </Modal>
     );
