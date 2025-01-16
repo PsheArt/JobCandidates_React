@@ -21,8 +21,8 @@ const samplecandidates: Candidate[] = [
 ];
 
 const sampleAssignments: Assignment[] = [
-    { Id: 1, NameTask: "Задание 1", DescriptionTask: "Описание задания 1", Stak: [Stack.CSharp, Stack.Golang], DeadLine: new Date('2023-12-10'), ExecutionTime: new Date('2023-11-10') },
-    { Id: 2, NameTask: "Задание 2", DescriptionTask: "Описание задания 2", Stak: [Stack.Golang], DeadLine: new Date('2023-12-20'), ExecutionTime: new Date('2023-11-20') },
+    { Id: 1, NameTask: "Задание 1", DescriptionTask: "Описание задания 1", Stak: [Stack.CSharp, Stack.Golang],ExecutionTime: 4 },
+    { Id: 2, NameTask: "Задание 2", DescriptionTask: "Описание задания 2", Stak: [Stack.Golang], ExecutionTime: 5 },
 ];
 
 const sampleInterviews: Interview[] = [

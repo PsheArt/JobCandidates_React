@@ -18,8 +18,7 @@ const AssignmentTable: React.FC<AssignmentTableProps> = ({ assignments, onEdit, 
                         <TableCell>ID</TableCell>
                         <TableCell>Название задания</TableCell>
                         <TableCell>Описание</TableCell>
-                        <TableCell>Срок выполнения</TableCell>
-                        <TableCell>Время выполнения</TableCell>
+                        <TableCell>Время выполнения в днях</TableCell>
                         <TableCell>Действие</TableCell>
                     </TableRow>
                 </TableHead>
@@ -29,8 +28,7 @@ const AssignmentTable: React.FC<AssignmentTableProps> = ({ assignments, onEdit, 
                             <TableCell>{assignment.Id}</TableCell>
                             <TableCell>{assignment.NameTask}</TableCell>
                             <TableCell>{assignment.DescriptionTask}</TableCell>
-                            <TableCell>{new Date(assignment.DeadLine).toLocaleDateString()}</TableCell>
-                            <TableCell>{new Date(assignment.ExecutionTime).toLocaleDateString()}</TableCell>
+                            <TableCell>{assignment.ExecutionTime}</TableCell>
                              <TableCell>
                                 <Button onClick={(e) => { e.stopPropagation(); onDelete(assignment.Id); }}>Удалить</Button>
                             </TableCell>

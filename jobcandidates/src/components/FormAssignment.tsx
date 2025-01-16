@@ -14,21 +14,18 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit
     const [nameTask, setNameTask] = useState(initialData?.NameTask || '');
     const [descriptionTask, setDescriptionTask] = useState(initialData?.DescriptionTask || '');
     const [stak, setStack] = useState(initialData?.Stak  || []);
-    const [deadLine, setDeadLine] = useState(initialData?.DeadLine.toISOString().split('T')[0]  || '');
-    const [executionTime, setExecutionTime] = useState(initialData?.ExecutionTime.toISOString().split('T')[0]  || '');
+    const [executionDays, setExecutionDays] = useState(initialData?.ExecutionTime || 0);
     useEffect(() => {
         if (initialData) {
            setNameTask(initialData.NameTask);
            setDescriptionTask(initialData.DescriptionTask);
            setStack(initialData.Stak);
-           setDeadLine(initialData.DeadLine.toISOString().split('T')[0]);
-           setExecutionTime(initialData.ExecutionTime.toISOString().split('T')[0]);
+            setExecutionDays(initialData.ExecutionTime);
         } else {
             setNameTask('');
             setDescriptionTask('');
             setStack([]);
-            setDeadLine('');
-            setExecutionTime('');
+            setExecutionDays('');
         }
     }, [initialData]);
 
@@ -38,14 +35,13 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit
         } = event;
         setStack(prev => ({ ...prev, Stak: typeof value === 'string' ? value.split(',') as Stack[] : value }));
     };
-      const handleSubmit = () => {
+    const handleSubmit = () => {
         const assignment: Assignment = {
             Id: initialData ? initialData.Id : Date.now(),
             NameTask: nameTask,
             DescriptionTask: descriptionTask,
             Stak: stak,
-            DeadLine: new Date(deadLine),
-            ExecutionTime: new Date(executionTime)
+            ExecutionTime: executionDays
         };
         onSubmit(assignment);
         onClose();
@@ -69,17 +65,10 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit
                     fullWidth
                 />
                 <TextField
-                    label="Срок выполнения"
-                    type="date"
-                    value={deadLine}
-                    onChange={(e) => setDeadLine(e.target.value)} 
-                    fullWidth
-                />
-                <TextField
-                    label="Время  выполнения"
-                    type="date"
-                    value={executionTime}
-                    onChange={(e) => setExecutionTime(e.target.value)} 
+                    label="Продолжительность выполнения (дни)"
+                    type="number"
+                    value={executionDays}
+                    onChange={(e) => setExecutionDays(e.target.value)}
                     fullWidth
                 />
                 <FormControl fullWidth>

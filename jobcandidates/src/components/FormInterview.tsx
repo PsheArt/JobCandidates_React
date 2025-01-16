@@ -32,7 +32,6 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     const [assignmentDescription, setAssignmentDescription] = useState(interview?.Assignment.DescriptionTask || '');
     const [executionTime, setExecutionTime] = useState(interview?.Assignment.ExecutionTime.toISOString().split('T')[0] || '');
     const [assignmentId ] = useState(interview?.Assignment.Id || '');
-    const [executionDeadLine, ] = useState(interview?.Assignment.DeadLine|| new Date());
     const [candidateFullName, setCandidateFullName] = useState(interview?.CandidateId.FullName || '');
     const [candidateAddress, setCandidateAddress] = useState(interview?.CandidateId.Adress || '');
     const [candidateId] = useState(interview?.CandidateId.Id || '');
@@ -53,7 +52,6 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                 DescriptionTask: assignmentDescription,
                 ExecutionTime: new Date(executionTime),
                 Stak: stack, 
-                DeadLine: executionDeadLine
             },
             LinkOnCompletedTask: linkOnCompletedTask,
             AttachedFiles: [], 
@@ -123,8 +121,8 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                             fullWidth
                         />
                         <TextField
-                            label="Срок выполнения"
-                            type="date"
+                            label="Продолжительность"
+                            type="number"
                             value={executionTime}
                             onChange={(e) => setExecutionTime(e.target.value)}
                             fullWidth
