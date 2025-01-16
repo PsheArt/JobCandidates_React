@@ -30,7 +30,7 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     const [interviewer, setInterviewer] = useState(interview?.Interviewer || '');
     const [assignmentName, setAssignmentName] = useState(interview?.Assignment.NameTask || '');
     const [assignmentDescription, setAssignmentDescription] = useState(interview?.Assignment.DescriptionTask || '');
-    const [executionTime, setExecutionTime] = useState(interview?.Assignment.ExecutionTime.toISOString().split('T')[0] || '');
+    const [executionTime, setExecutionTime] = useState(interview?.Assignment.ExecutionTime || 0);
     const [assignmentId ] = useState(interview?.Assignment.Id || '');
     const [candidateFullName, setCandidateFullName] = useState(interview?.CandidateId.FullName || '');
     const [candidateAddress, setCandidateAddress] = useState(interview?.CandidateId.Adress || '');
@@ -50,7 +50,7 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                 Id: assignmentId as number,
                 NameTask: assignmentName,
                 DescriptionTask: assignmentDescription,
-                ExecutionTime: new Date(executionTime),
+                ExecutionTime: executionTime,
                 Stak: stack, 
             },
             LinkOnCompletedTask: linkOnCompletedTask,

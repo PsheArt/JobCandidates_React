@@ -33,7 +33,8 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit
         const {
             target: { value },
         } = event;
-        setStack(prev => ({ ...prev, Stak: typeof value === 'string' ? value.split(',') as Stack[] : value }));
+        const selectedValues = typeof value === 'string' ? value.split(',') as Stack[] : value;
+        setStack(selectedValues);
     };
     const handleSubmit = () => {
         const assignment: Assignment = {
