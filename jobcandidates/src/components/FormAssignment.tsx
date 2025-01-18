@@ -14,13 +14,13 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit
     const [nameTask, setNameTask] = useState(initialData?.NameTask || '');
     const [descriptionTask, setDescriptionTask] = useState(initialData?.DescriptionTask || '');
     const [stak, setStack] = useState(initialData?.Stak  || []);
-    const [executionDays, setExecutionDays] = useState(initialData?.ExecutionTime || 0);
+    const [executionDays, setExecutionDays] = useState(initialData?.ExecutionTime.toString() || '');
     useEffect(() => {
         if (initialData) {
            setNameTask(initialData.NameTask);
            setDescriptionTask(initialData.DescriptionTask);
            setStack(initialData.Stak);
-            setExecutionDays(initialData.ExecutionTime);
+            setExecutionDays(initialData.ExecutionTime.toString());
         } else {
             setNameTask('');
             setDescriptionTask('');

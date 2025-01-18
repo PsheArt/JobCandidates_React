@@ -43,6 +43,7 @@ const ManageAssignment: React.FC = () => {
                 open={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 onSubmit={handleAddOrUpdate}
+                initialData={selectedAssignment}
             />
         </>
     );
