@@ -13,14 +13,11 @@ const FormLogin: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        try {
-            const response = await login(username, password);
-            const token = response.token;
-            Cookies.set('authToken', token, { expires: 7 });
-            navigate('/');
-        } catch (err) {
-            setError(err);
-        }
+        const response = await login(username, password);
+        const token = response.token;
+        Cookies.set('authToken', token, { expires: 7 });
+        navigate('/');
+
     };
 
     return (
