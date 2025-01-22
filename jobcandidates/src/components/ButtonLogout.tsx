@@ -16,7 +16,7 @@ const ButtonLogout: React.FC = () => {
 
     return (
         <Button type="submit"  onClick={handleLogout}  variant="contained" color="primary" fullWidth>
-                Выйти
+                Р’С‹Р№С‚Рё
         </Button>
     );
 };

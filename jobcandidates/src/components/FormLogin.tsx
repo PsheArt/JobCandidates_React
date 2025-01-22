@@ -22,10 +22,10 @@ const FormLogin: React.FC = () => {
 
     return (
         <Container maxWidth="xs">
-            <Typography variant="h4" align="center">Вход</Typography>
+            <Typography variant="h4" align="center">Р’С…РѕРґ</Typography>
             <form onSubmit={handleSubmit}>
                 <TextField
-                    label="Имя пользователя"
+                    label="РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ"
                     variant="outlined"
                     fullWidth
                     margin="normal"
@@ -34,7 +34,7 @@ const FormLogin: React.FC = () => {
                     required
                 />
                 <TextField
-                    label="Пароль"
+                    label="РџР°СЂРѕР»СЊ"
                     type="password"
                     variant="outlined"
                     fullWidth
@@ -45,7 +45,7 @@ const FormLogin: React.FC = () => {
                 />
                 {error && <Alert severity="error">{error}</Alert>}
                 <Button type="submit" variant="contained" color="primary" fullWidth>
-                    Войти
+                    Р’РѕР№С‚Рё
                 </Button>
             </form>
         </Container>
