@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { ButtonLogout } from './ButtonLogout'
+import  ButtonLogout  from './ButtonLogout'
 
 
 const Header: React.FC = () => {
@@ -18,9 +18,9 @@ const Header: React.FC = () => {
                 <Button color="inherit" component={Link} to="/assignments">Управление тестовыми заданиями</Button>
                   {authToken ? (
                    <ButtonLogout/>
-            ) : (
-                <Button color="inherit" component={Link} to="/login">Вход</Button>
-            )}
+                   ) : (
+                        <Button color="inherit" component={Link} to="/login">Вход</Button>
+                   )}
                
             </Toolbar>
         </AppBar>
