@@ -1,82 +1,98 @@
-// AssignmentModal.tsx
 import React, { useEffect, useState } from 'react';
-import { Modal, TextField, Button, MenuItem } from '@mui/material';
+import { SelectChangeEvent } from '@mui/material/Select';
+import { Modal, TextField, Button, MenuItem, Select, Chip, InputLabel, FormControl } from '@mui/material';
 import { Stack, Assignment } from '../models/Assignment';
-import { useAssignments } from '../contexts/AssignmentContext';
 
 interface AssignmentFormProps {
     open: boolean;
+    onSubmit: (assignment: Assignment) => void;
     onClose: () => void;
-    assignment?: Assignment; 
+    initialData?: Assignment | null;
 }
 
-const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, assignment }) => {
-    const { addAssignment, updateAssignment } = useAssignments();
-    const [formData, setFormData] = useState<Assignment>({
-        Id: assignment ? assignment.Id : Date.now(),
-        NameTask: '',
-        DescriptionTask: '',
-        Stak: [],
-        DeadLine: new Date(),
-        ExecutionTime: new Date(),
-    });
-
+const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit, initialData }) => {
+    const [nameTask, setNameTask] = useState(initialData?.NameTask || '');
+    const [descriptionTask, setDescriptionTask] = useState(initialData?.DescriptionTask || '');
+    const [stak, setStack] = useState(initialData?.Stak  || []);
+    const [executionDays, setExecutionDays] = useState(initialData?.ExecutionTime.toString() || '');
     useEffect(() => {
-        if (assignment) {
-            setFormData(assignment);
-        }
-    }, [assignment]);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleStackChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { value } = e.target;
-        setFormData(prev => ({ ...prev, Stak: [value as Stack] }));
-    };
-
-    const handleSubmit = () => {
-        if (assignment) {
-            updateAssignment(formData);
+        if (initialData) {
+           setNameTask(initialData.NameTask);
+           setDescriptionTask(initialData.DescriptionTask);
+           setStack(initialData.Stak);
+            setExecutionDays(initialData.ExecutionTime.toString());
         } else {
-            addAssignment(formData);
+            setNameTask('');
+            setDescriptionTask('');
+            setStack([]);
+            setExecutionDays('');
         }
+    }, [initialData]);
+
+    const handleStackChange = (event: SelectChangeEvent<Stack[]>) => {
+        const {
+            target: { value },
+        } = event;
+        const selectedValues = typeof value === 'string' ? value.split(',') as Stack[] : value;
+        setStack(selectedValues);
+    };
+    const handleSubmit = () => {
+        const assignment: Assignment = {
+            Id: initialData ? initialData.Id : Date.now(),
+            NameTask: nameTask,
+            DescriptionTask: descriptionTask,
+            Stak: stak,
+            ExecutionTime: executionDays
+        };
+        onSubmit(assignment);
         onClose();
     };
-
     return (
         <Modal open={open} onClose={onClose}>
             <div style={{ padding: '20px', backgroundColor: 'white' }}>
-                <h2>{assignment ? 'Edit Assignment' : 'Add Assignment'}</h2>
+                <h2>{initialData ? 'Изменить' : 'Добавить'}</h2>
                 <TextField
-                    label="Task Name"
+                    label="Название задания"
                     name="NameTask"
-                    value={formData.NameTask}
-                    onChange={handleChange}
+                    value={nameTask}
+                    onChange={(e) => setNameTask(e.target.value)} 
                     fullWidth
                 />
                 <TextField
-                    label="Description"
+                    label="Описание задания"
                     name="DescriptionTask"
-                    value={formData.DescriptionTask}
-                    onChange={handleChange}
+                    value={descriptionTask}
+                    onChange={(e) => setDescriptionTask(e.target.value)} 
                     fullWidth
                 />
                 <TextField
-                    select
-                    label="Stack"
-                    name="Stak"
-                    value={formData.Stak[0] || ''}
-                    onChange={handleStackChange}
+                    label="Продолжительность выполнения (дни)"
+                    type="number"
+                    value={executionDays}
+                    onChange={(e) => setExecutionDays(e.target.value)}
                     fullWidth
-                >
-                    {Object.values(Stack).map((stack) => (
-                        <MenuItem key={stack} value={stack}>{stack}</MenuItem>
-                    ))}
-                </TextField>
-                <Button onClick={handleSubmit}>{assignment ? 'Update' : 'Add'}</Button>
+                />
+                <FormControl fullWidth>
+                    <InputLabel>Стек</InputLabel>
+                    <Select
+                        multiple
+                        value={stak}
+                        onChange={handleStackChange}
+                        renderValue={(selected) => (
+                            <div>
+                                {selected.map((value) => (
+                                    <Chip key={value} label={value} />
+                                ))}
+                            </div>
+                        )}>
+                        {Object.values(Stack).map((stack) => (
+                            <MenuItem key={stack} value={stack}>
+                                {stack}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+                <Button onClick={handleSubmit}>{initialData ? 'Обновить' : 'Добавить'}</Button>
             </div>
         </Modal>
     );

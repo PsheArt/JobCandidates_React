@@ -22,7 +22,7 @@ const style = {
 };
 
 const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: Interview; onSubmit:(interview:Interview)=>void }> = ({ open, onClose, interview,  onSubmit }) => {
-    const [, addInterview, updateInterview, ] = useInterviewContext();
+    const { addInterview, updateInterview }  = useInterviewContext();
     const [tabIndex, setTabIndex] = useState(0);
     const [dateInterview, setDateInterview] = useState(interview?.DateInterview.toISOString().split('T')[0] || '');
     const [department, setDepartment] = useState(interview?.Department || '');
@@ -30,22 +30,17 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
     const [interviewer, setInterviewer] = useState(interview?.Interviewer || '');
     const [assignmentName, setAssignmentName] = useState(interview?.Assignment.NameTask || '');
     const [assignmentDescription, setAssignmentDescription] = useState(interview?.Assignment.DescriptionTask || '');
-    const [executionTime, setExecutionTime] = useState(interview?.Assignment.ExecutionTime.toISOString().split('T')[0] || '');
-    const [assignmentId, ] = useState(interview?.Assignment.Id || '');
-    const [executionDeadLine, ] = useState(interview?.Assignment.DeadLine|| new Date());
+    const [executionTime, setExecutionTime] = useState(interview?.Assignment.ExecutionTime.toString() || '');
+    const [assignmentId ] = useState(interview?.Assignment.Id || '');
     const [candidateFullName, setCandidateFullName] = useState(interview?.CandidateId.FullName || '');
     const [candidateAddress, setCandidateAddress] = useState(interview?.CandidateId.Adress || '');
-    const [candidateId, ] = useState(interview?.CandidateId.Id || '');
+    const [candidateId] = useState(interview?.CandidateId.Id || '');
     const [candidateDateBirth] = useState(interview?.CandidateId.DateBirth || '');
     const [candidatePhoneNumber] = useState(interview?.CandidateId.PhoneNumber || '');
-    
-
     const [stack] = useState<Stack[]>(interview?.Assignment.Stak || []);
 
-
-
     const handleSubmit = () => {
-        const newInterview = {
+        const newInterview:Interview = {
             Id: interview ? interview.Id : Date.now(),
             CandidateId: {Id:candidateId as number, FullName: candidateFullName, Adress: candidateAddress,  PhoneNumber:candidatePhoneNumber, DateBirth: candidateDateBirth as Date },
             DateInterview: new Date(dateInterview),
@@ -55,9 +50,8 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                 Id: assignmentId as number,
                 NameTask: assignmentName,
                 DescriptionTask: assignmentDescription,
-                ExecutionTime: new Date(executionTime),
+                ExecutionTime: executionTime,
                 Stak: stack, 
-                DeadLine: executionDeadLine
             },
             LinkOnCompletedTask: linkOnCompletedTask,
             AttachedFiles: [], 
@@ -127,8 +121,8 @@ const FormInterview: React.FC<{ open: boolean; onClose: () => void; interview?: 
                             fullWidth
                         />
                         <TextField
-                            label="Срок выполнения"
-                            type="date"
+                            label="Продолжительность"
+                            type="number"
                             value={executionTime}
                             onChange={(e) => setExecutionTime(e.target.value)}
                             fullWidth

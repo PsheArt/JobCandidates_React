@@ -37,7 +37,6 @@ export const CandidateProvider: React.FC<{ children: ReactNode }> = ({ children 
 };
 
 export const useCandidates = () => {
-
     const context = useContext(CandidateContext);
     if (!context) {
         throw new Error('useCandidates must be used within a CandidateProvider');

@@ -9,7 +9,7 @@ import FormInterview from '../components/FormInterview'
 const ManageInterview: React.FC = () =>{
 
     const [selectedInterview, setSelectedInterview] = useState<Interview| null>(null)
-    const [interviews, addInterview, updateInterview, deleteInterview ] = useInterviewContext();
+    const { interviews, addInterview, updateInterview, deleteInterview } = useInterviewContext();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
      const handleDelete = (id: number) => {
