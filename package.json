@@ -2,5 +2,8 @@
   "dependencies": {
     "@mui/material": "^6.3.1",
     "js-cookie": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6"
   }
 }

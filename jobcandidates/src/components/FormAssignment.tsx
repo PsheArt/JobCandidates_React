@@ -42,7 +42,7 @@ const FormAssignment: React.FC<AssignmentFormProps> = ({ open, onClose, onSubmit
             NameTask: nameTask,
             DescriptionTask: descriptionTask,
             Stak: stak,
-            ExecutionTime: executionDays
+            ExecutionTime: Number(executionDays)
         };
         onSubmit(assignment);
         onClose();
