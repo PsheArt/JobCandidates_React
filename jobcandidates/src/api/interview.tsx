@@ -10,5 +10,9 @@ export const getInterview = async (id: string) => {
     return await axios.get(`${API_URL}/${getInterview}/${id}`);
 };
 export const getInterviewer = async (id: string) => {
-    return await axios.get(`${API_URL}/${getInterviewer}/${id}`)
+    return await axios.get(`${API_URL}/GetInterviewer/${id}`)
+}
+
+export const getDepartment = async (id: string) => {
+    return await axios.get(`${API_URL}/GetDepartment/${id}`)
 }
