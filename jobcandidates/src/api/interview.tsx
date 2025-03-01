@@ -16,3 +16,7 @@ export const getInterviewer = async (id: string) => {
 export const getDepartment = async (id: string) => {
     return await axios.get(`${API_URL}/GetDepartment/${id}`)
 }
+
+export const getHeaderOfDepartment = async (id: string) => {
+    return await axios.get(`${API_URL}/GetHeadOfDepartment/${id}`)
+}
