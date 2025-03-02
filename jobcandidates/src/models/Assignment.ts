@@ -3,7 +3,7 @@ export interface Assignment {
     NameTask: string
     DescriptionTask: string
     Stak: Stack[]
-    ExecutionTime: number
+    ExecutionTime: string
 }
 export enum Stack {
     None = "",
