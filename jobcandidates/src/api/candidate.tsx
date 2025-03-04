@@ -6,7 +6,7 @@ export const getCandidates = async () => {
 };
 
 export const getCandidate = async (id: string) => {
-    return await axios.get(`${API_URL}/get_${id}`);
+    return await axios.get(`${API_URL}/get/${id}`);
 };
 export const newCandidate= async () => {
     return await axios.get(`${API_URL}/newcandidate`);
