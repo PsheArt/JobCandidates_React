@@ -3,6 +3,7 @@ import { Assignment } from "./Assignment"
 
 export interface Interview {
     Id: number
+    Name:string
     CandidateId: Candidate
     DateInterview: Date
     Department: string
@@ -10,6 +11,9 @@ export interface Interview {
     Assignment: Assignment
     LinkOnCompletedTask: string
     AttachedFiles: File[]
-    Interviewer:string
+    Interviewer: string
+    HeadOfDepartment: string
+    Status:string
+
 }
  
