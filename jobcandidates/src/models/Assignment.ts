@@ -4,6 +4,7 @@ export interface Assignment {
     DescriptionTask: string
     Stak: Stack[]
     ExecutionTime: string
+    IsDeleted: boolean
 }
 export enum Stack {
     None = "",

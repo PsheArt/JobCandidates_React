@@ -4,4 +4,5 @@ export interface Candidate {
     PhoneNumber: string
     Adress: string
     DateBirth: Date
+    IsDeleted:boolean
 }
